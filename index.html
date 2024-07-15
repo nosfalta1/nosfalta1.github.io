@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Fútbol Social</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Aplicación de Fútbol Social</h1>
+        <p>Conecta y juega fútbol con quien quieras, cuando quieras.</p>
+    </header>
+
+    <section id="crear-partido">
+        <h2>Crear un Partido</h2>
+        <form id="partido-form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required>
+            
+            <label for="lugar">Lugar:</label>
+            <input type="text" id="lugar" name="lugar" required>
+            
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+            
+            <button type="submit">Crear Partido</button>
+        </form>
+    </section>
+
+    <section id="partidos-disponibles">
+        <h2>Partidos Disponibles</h2>
+        <label for="ciudad">Selecciona tu ciudad:</label>
+        <select id="ciudad">
+            <option value="ciudad1">Ciudad 1</option>
+            <option value="ciudad2">Ciudad 2</option>
+            <option value="ciudad3">Ciudad 3</option>
+        </select>
+        <div id="lista-partidos"></div>
+    </section>
+
+    <section id="chat">
+        <h2>Chat</h2>
+        <div id="chat-messages"></div>
+        <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+        <button id="chat-send">Enviar</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
