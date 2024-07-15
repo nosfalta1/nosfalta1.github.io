@@ -12,42 +12,46 @@
         <p>Conecta y juega fútbol con quien quieras, cuando quieras.</p>
     </header>
 
-    <section id="crear-partido">
-        <h2>Crear un Partido</h2>
-        <form id="partido-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required>
-            
-            <label for="lugar">Lugar:</label>
-            <input type="text" id="lugar" name="lugar" required>
-            
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required>
-            
-            <button type="submit">Crear Partido</button>
-        </form>
-    </section>
+    <main>
+        <section id="crear-partido" class="card">
+            <h2>Crear un Partido</h2>
+            <form id="partido-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                
+                <label for="lugar">Lugar:</label>
+                <input type="text" id="lugar" name="lugar" required>
+                
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <button type="submit">Crear Partido</button>
+            </form>
+        </section>
 
-    <section id="partidos-disponibles">
-        <h2>Partidos Disponibles</h2>
-        <label for="ciudad">Selecciona tu ciudad:</label>
-        <select id="ciudad">
-            <option value="ciudad1">Ciudad 1</option>
-            <option value="ciudad2">Ciudad 2</option>
-            <option value="ciudad3">Ciudad 3</option>
-        </select>
-        <div id="lista-partidos"></div>
-    </section>
+        <section id="partidos-disponibles" class="card">
+            <h2>Partidos Disponibles</h2>
+            <label for="ciudad">Selecciona tu ciudad:</label>
+            <select id="ciudad">
+                <option value="ciudad1">Ciudad 1</option>
+                <option value="ciudad2">Ciudad 2</option>
+                <option value="ciudad3">Ciudad 3</option>
+            </select>
+            <div id="lista-partidos"></div>
+        </section>
 
-    <section id="chat">
-        <h2>Chat</h2>
-        <div id="chat-messages"></div>
-        <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
-        <button id="chat-send">Enviar</button>
-    </section>
+        <section id="chat" class="card">
+            <h2>Chat</h2>
+            <div id="chat-messages"></div>
+            <div id="chat-input-container">
+                <input type="text" id="chat-input" placeholder="Escribe tu mensaje...">
+                <button id="chat-send">Enviar</button>
+            </div>
+        </section>
+    </main>
 
     <script src="app.js"></script>
 </body>
