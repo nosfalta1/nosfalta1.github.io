@@ -1,42 +1,93 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
 header {
     background-color: #4CAF50;
     color: white;
+    width: 100%;
     text-align: center;
-    padding: 1em 0;
+    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
-section {
-    margin: 1em;
-    padding: 1em;
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.card {
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 h2 {
     color: #4CAF50;
+    margin-bottom: 20px;
 }
 
 form label, form input, form button {
     display: block;
-    margin: 0.5em 0;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
 
 #chat {
-    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
 #chat-messages {
+    flex-grow: 1;
     height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
     border: 1px solid #ccc;
-    padding: 1em;
-    margin-bottom: 1em;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#chat-input-container {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
